@@ -9,3 +9,5 @@ function countUpAndDown(n) {
     }
     console.log("Back down")
 }
+
+// In the above example, the first for loop is O(n) while the second is also O(n). Therefore, this function is still O(n).
