@@ -45,7 +45,7 @@ console.log(charCount("Hi hello!"))
 
 function isAlphaNumeric(char) {
 
-    for (let i = 0; i < str.length; i++) {
+    for (let i = 0; i < char.length; i++) {
         let code = char.charCodeAt(0);
         if (!(code > 47 && code < 58) && //numeric (0-9)
         !(code > 64 && code < 91) && //upper alpha (A-Z)
