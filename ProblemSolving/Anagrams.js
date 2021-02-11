@@ -24,12 +24,19 @@ for (let key in frequencyCounter1) {
     if (!(key in frequencyCounter2)) {
         return false
     }
+    //Checking to see if the frequency of the keys match in both strings
+    else if (frequencyCounter2[key] !== frequencyCounter1[key]) {
+        return false
+    }
 }
 //Loop over the second frequencyCounter object (forIn loop) and check if key is in frequencyCounter1
 for (let key in frequencyCounter2) {
     if (!(key in frequencyCounter1)) {
         return false
     }
+    // else if (frequencyCounter2[key] !== frequencyCounter1[key]) {
+    //     return false
+    // }
 }
 
 return true
