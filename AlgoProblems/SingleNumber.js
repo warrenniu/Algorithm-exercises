@@ -31,3 +31,25 @@ function singleNumber(nums) {
 }
 
 console.log(singleNumber([4,1,2,1,2]))
+
+
+//Leetcode solutions
+
+//#1
+//function singleNumber(nums) {
+// 	return nums.reduce((prev, curr) => prev ^ curr);
+// }
+
+//===============================================================================
+
+//#2
+// function singleNumber (nums) {
+//     seen = new Set()
+//     return nums.reduce((sum, num) => {
+//         if(seen.has(num)) return sum - num
+//         else {
+//             seen.add(num)
+//             return sum + num
+//         }
+//     }, 0)
+// };
