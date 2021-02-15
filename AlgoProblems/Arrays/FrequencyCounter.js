@@ -89,8 +89,8 @@ function same(arr1, arr2) {
         frequencyCounter2[val] ? frequencyCounter2[val] +=1 : frequencyCounter2[val] = 1
     }
 
-    // console.log(frequencyCounter1)
-    // console.log(frequencyCounter2)
+    console.log(frequencyCounter1)
+    console.log(frequencyCounter2)
 
     for (key in frequencyCounter1) {
         if (!(key ** 2 in frequencyCounter2)) {
@@ -112,5 +112,5 @@ function same(arr1, arr2) {
 
 
 //Should return true
-console.log(same([1,2,3], [9,1,4]))
+console.log(same([1,2,2,3], [9,1,9,4]))
 
