@@ -45,5 +45,12 @@ var sortedSquares = function(A) {
     return result;
 };
 
+//[-4,1,0,3,10]
+//1st iteration
+//A[l] = -4
+//A[r] = 10
+//p = 3
+
+
 
 console.log(sortedSquares([-4,-1,0,3,10]))
