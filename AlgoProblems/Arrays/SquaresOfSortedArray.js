@@ -27,30 +27,31 @@
 //     return sortedArray
 // }
 
+//===============================================================================
+//Given an integer array A sorted in non-decreasing order, return an array of the squares of each number sorted in non-decreasing order
+//===============================================================================
+
 //APPROACH #2 (Using multiple pointers)
-var sortedSquares = function(A) {
-    let result = [];
-    let l = 0;
-    let r = A.length - 1;
-    let p = r;
+function sortedSquares(A) {
+    let left = 0;
+    let right = A.length - 1
+    let result = []
 
-    while (l <= r) {
-        if (A[l] ** 2 > A[r] ** 2) {
-            result[p--] = A[l++] ** 2;
-        } else {
-            result[p--] = A[r--] ** 2;
+    for (let i = A.length - 1; i >=0; i--) {
+        if (Math.abs(A[left]) > A[right]) {
+            A[left] = A[left] ** 2
+            result.unshift(A[left])
+            left++
+            // console.log(result)
         }
+        else {
+            A[right] = A[right] ** 2
+            result.unshift(A[right])
+            right--
+        }
+        // console.log(result)
     }
-    
-    return result;
-};
+    return result 
+}
 
-//[-4,1,0,3,10]
-//1st iteration
-//A[l] = -4
-//A[r] = 10
-//p = 3
-
-
-
-console.log(sortedSquares([-4,-1,0,3,10]))
+console.log(sortedSquares([-4,-1,1,3,10]))
