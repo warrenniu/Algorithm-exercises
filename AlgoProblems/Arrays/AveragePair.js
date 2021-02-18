@@ -19,10 +19,10 @@ function averagePair(arr, N) {
         if (arr[left] + arr[right] / 2 === N) {
             return true
         }
-        else if (arr[left] + arr[right] > N) {
+        else if (arr[left] + arr[right] / 2 > N) {
             right--
         }
-        else if (arr[left] + arr[right] < N) {
+        else if (arr[left] + arr[right] / 2 < N) {
             left++
         }
     }
