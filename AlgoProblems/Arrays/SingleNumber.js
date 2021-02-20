@@ -8,11 +8,8 @@
 //Each element in the array appears twice except for one element which appears only once
 
 function singleNumber(nums) {
-    //object to store key value pairs of array values
     let frequencyCounter = {}
 
-    //tried to use for loop - was getting different results
-    //for (i = 0; i < nums.length; i++)
     for (val of nums) {
         if (nums.length === 1) {
             return val
@@ -26,19 +23,26 @@ function singleNumber(nums) {
             return key
         }
     }
-
-
 }
-
 console.log(singleNumber([4,1,2,1,2]))
+
+
+
 
 
 //Leetcode solutions
 
 //#1
-//function singleNumber(nums) {
-// 	return nums.reduce((prev, curr) => prev ^ curr);
-// }
+
+
+
+
+
+function singleNumber(nums) {
+	return nums.reduce((prev, curr) => prev ^ curr);
+}
+
+
 
 //===============================================================================
 
@@ -53,3 +57,12 @@ console.log(singleNumber([4,1,2,1,2]))
 //         }
 //     }, 0)
 // };
+
+// X          Y     Z
+// 0  XOR(^)  0  => 0
+// 0  XOR(^)  1  => 1
+// 1  XOR(^)  0  => 1
+// 1  XOR(^)  1  => 0
+
+
+
