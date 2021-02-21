@@ -7,7 +7,7 @@
 
 //Steps (Multiple Pointers)
 //1. Set left pointer to 0; right pointer to last index
-//2. With each iteration, set left pointer to right pointer
+//2. With each iteration, set a temp variable to the value of the left pointer set left pointer to right pointer
 //3. return s at end of function
 
 // function reverseString(s) {
