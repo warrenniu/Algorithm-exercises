@@ -28,6 +28,7 @@ function relativeSortArray(arr1, arr2) {
             }
         }
     }
+    console.log(newArray)
 
     for (val of arr1) {
         frequencyCounter1[val] ? frequencyCounter1[val] += 1 : frequencyCounter1[val] = 1
@@ -43,8 +44,10 @@ function relativeSortArray(arr1, arr2) {
         if (!(key in frequencyCounter2)) {
             let keyInteger = parseInt(key)
             let valueInteger = parseInt(frequencyCounter1[key])
-            let sum = keyInteger * valueInteger
-            newArray.push(sum)
+            for (let i = 0; i < valueInteger; i++) {
+                newArray.push(keyInteger)
+            }
+            
         }
     }
 
