@@ -29,3 +29,41 @@
 //     }
 // }
 
+//set a left pointer at 0
+//set a right pointer at 1
+//set a while loop where left is less than right
+//set conditional if both are even, move pointers & if both pointers are not on the same index
+//set conditional if left pointer value is even
+//set conditional if right pointer value is even
+
+
+function swapConsecutiveEvens(nums) {
+    let leftPointer = 0;
+    let rightPointer = 1;
+
+    while (rightPointer < nums.length) {
+        if (nums[leftPointer] % 2 === 0 && nums[rightPointer] % 2 === 0 && leftPointer !== rightPointer) {
+            let temp = nums[leftPointer];
+            nums[leftPointer] = nums[rightPointer]
+            nums[rightPointer] = temp
+            leftPointer = rightPointer + 1
+            rightPointer += 2
+        }
+        else if (nums[leftPointer] % 2 === 0) {
+            rightPointer++
+        }
+        else if (nums[rightPointer] % 2 === 0) {
+            leftPointer++
+        }
+        else if (leftPointer === rightPointer) {
+            rightPointer++
+        }
+        else if (nums[leftPointer] % 2 !== 0 && nums[rightPointer] % 2 !== 0) {
+            leftPointer = rightPointer + 1
+            rightPointer += 2
+        }
+    }
+    return nums
+}
+
+console.log(swapConsecutiveEvens([5,3,4,6,8,10]))
