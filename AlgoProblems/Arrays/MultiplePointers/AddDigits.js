@@ -25,28 +25,25 @@ function addDigits(num) {
         for (let i = 0; i < numString.length; i++) {
             currentSum = currentSum + parseInt(numString[i])
             console.log(currentSum)
-            addDigits(currentSum)
         }
-        return currentSum
         
         // numString = currentSum.toString().split('')
         // console.log(numString)
     }
-  
-
+    
+    
     else if (numString.length <= 1) {
         return parseInt(numString)
     }
-    // else if (numString.length <= 1) {
-    // return currentSum
-    // }
+    
+    return addDigits(currentSum)
 }
 
 
 
 
 
-console.log(addDigits(38))
+console.log(addDigits(383))
 
 
 // function sumDigits(num) {
