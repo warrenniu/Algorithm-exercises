@@ -68,26 +68,42 @@
 //3. If arr[j] is greater than arr[j+1], swap those two values
 //4. Return the sorted array
 
-function bubbleSort(arr) {
-    let noSwaps; //stop the loop after we've finished sorting so there isnt any needless iterations
-    for (let i = arr.length; i > 0; i--) {
+// function bubbleSort(arr) {
+//     let noSwaps; //stop the loop after we've finished sorting so there isnt any needless iterations
+//     for (let i = arr.length; i > 0; i--) {
+//         noSwaps = true
+//         // console.log(arr[i])
+//         for (let j = 0; j < i - 1 ; j++) {
+//             console.log(arr,arr[j], arr[j+1])
+//             if (arr[j] > arr[j+1]) {
+//                 // [arr[j], arr[j+1], [arr[j+1], arr[j]]]
+//                 let temp = arr[j+1]
+//                 arr[j+1] = arr[j]
+//                 arr[j] = temp
+//                 noSwaps = false
+//             }
+//         }
+//         if (noSwaps) {
+//             break
+//         }
+//     }
+//     return arr
+// }
+
+function bubbleSort (arr) {
+    let noSwaps;
+    for (let j = arr.length - 1; j > 0; j--) {
         noSwaps = true
-        // console.log(arr[i])
-        for (let j = 0; j < i - 1 ; j++) {
-            console.log(arr,arr[j], arr[j+1])
-            if (arr[j] > arr[j+1]) {
-                // [arr[j], arr[j+1], [arr[j+1], arr[j]]]
-                let temp = arr[j+1]
-                arr[j+1] = arr[j]
-                arr[j] = temp
+        for (let i = 0; i < j; i++) {
+            if (arr[i] > arr[i+1]) {
+                let temp = arr[i]
+                arr[i] = arr[i+1]
+                arr[i+1] = temp
                 noSwaps = false
             }
         }
         if (noSwaps) {
             break
-            
-            // console.log(arr[j],arr[j+1])
-            // console.log(arr[i])
         }
     }
     return arr
@@ -95,21 +111,3 @@ function bubbleSort(arr) {
 
 console.log(bubbleSort([5,7,18,9,12,24,1]))
 
-
-
-
-
-
-
-// for (let i = 0; i < str1.length; i++) {
-//     for (let j = 0; j < str2.length; j++) {
-//         if (str2[j] !== str1[i]) {
-//             break
-//         }
-//         else if (j === str2.length  ){
-//             count++
-//             continue
-//         }
-//     }
-// }
-// return count
