@@ -23,8 +23,11 @@
 function reverseString(arr) {
     let left = 0;
     let right = arr.length - 1;
+    console.log(left)
+    console.log(right)
 
     while (left < right) {
+        console.log("in while loop")
         let temp = arr[left]
         arr[left] = arr[right]
         arr[right] = temp
