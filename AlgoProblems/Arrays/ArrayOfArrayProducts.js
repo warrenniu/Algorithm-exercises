@@ -11,8 +11,10 @@ function arrayOfArrayProducts(arr) {
     for (let i = 0; i < arr.length; i++) {
         let currentProduct = 1;
         for (let j = 0; j < arr.length; j++) {
+            console.log("arr[i]",arr[i], "arr[j",arr[j])
             if (j !== i) {
                 currentProduct *= arr[j]
+                console.log("currentProduct", currentProduct)
             }
         }
         productArray.push(currentProduct)
