@@ -39,35 +39,6 @@ function isHappy(n) {
         }
     }
 
-    //6 -> 36
-    // 45
-    // 41
-    //
-    //
-
-
-
-
-
-    // let currentNumber = n;
-    // let addedNumber = 0;
-
-    // while (currentNumber !== 1) {
-    //     let tempArray = currentNumber.toString().split('')
-    //     for (let i = 0; i < tempArray.length; i++) {
-    //         addedNumber += (tempArray[i] * tempArray[i])
-    //     }
-    //     currentNumber = addedNumber 
-    //     addedNumber = 0
-    // }
-
-    // if (currentNumber === 1) {
-    //     return true
-    // }
-    // else {
-    //     return false
-    // }
-
 }
 
 console.log(isHappy(7))
