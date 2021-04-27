@@ -30,55 +30,88 @@
 // Explanation
 // Only matrix[0][2] meet the criteria. The other two 1s share the same column.
 
+function matrixElements(matrix) {
+    let count = 0;
+    const rowLength = matrix[0].length;
 
-class Solution {
-    solve(matrix) {
-        let count = 0
-        const rowLength = matrix[0].length
+    for (let i = 0; i < matrix.length; i++) {
+        for (let j = 0; j < rowLength; j++) {
+            if (matrix[i][j] === 1) {
+                const rowFreq = {};
+                matrix[i].forEach(num => {
+                    rowFreq[num] ? rowFreq[num] += 1 : rowFreq[num] = 1
+                })
+                if (rowFreq[1] === 1) {
+                    const columnFreq = {};
+                    matrix.forEach(row => {
+                        columnFreq[row[j]] ? columnFreq[row[j]] += 1 : columnFreq[row[j]] = 1
 
-        for(let i = 0; i < matrix.length; i +=1 ){
-            for(let j = 0; j < rowLength; j += 1){
-                if(matrix[i][j] === 1){
-                    const rowFreq = {}
-                    matrix[i].forEach(num => {
-                        if(!rowFreq[num]){
-                            rowFreq[num] = 1
-                        } else {
-                            rowFreq[num] += 1
-                        }
                     })
-                    if(rowFreq[1] === 1){
-                       const colFreq = {}
-                       matrix.forEach(row => {
-                           if(!colFreq[row[j]]){
-                               colFreq[row[j]] = 1
-                           } else {
-                               colFreq[row[j]] += 1
-                           }
-                       })
-                       if(colFreq[1] === 1){
-                           count += 1
-                       }
+                    if (columnFreq[1] === 1) {
+                        count += 1
                     }
                 }
             }
         }
-
-        return count
-        // const array = [1,2,3,4,5,6,7]
-
-        // //array.length => 7
-        // //array[3] => 4
-
-        
-
-        // matrix = [ [0, 0, 1], [1, 0, 0], [0, 1, 0] ]
-
-        // matrix = [
-        //     [0, 0, 1],
-        //     [1, 0, 0],
-        //     [0, 1, 0]
-        // ]
-
     }
+    return count
 }
+
+
+console.log(matrixElements([[0, 0, 1], [1, 0, 0], [0, 1, 0]]))
+
+
+
+
+
+// class Solution {
+//     solve(matrix) {
+//         let count = 0
+//         const rowLength = matrix[0].length
+
+//         for(let i = 0; i < matrix.length; i +=1 ){
+//             for(let j = 0; j < rowLength; j += 1){
+//                 if(matrix[i][j] === 1){
+//                     const rowFreq = {}
+//                     matrix[i].forEach(num => {
+//                         if(!rowFreq[num]){
+//                             rowFreq[num] = 1
+//                         } else {
+//                             rowFreq[num] += 1
+//                         }
+//                     })
+//                     if(rowFreq[1] === 1){
+//                        const colFreq = {}
+//                        matrix.forEach(row => {
+//                            if(!colFreq[row[j]]){
+//                                colFreq[row[j]] = 1
+//                            } else {
+//                                colFreq[row[j]] += 1
+//                            }
+//                        })
+//                        if(colFreq[1] === 1){
+//                            count += 1
+//                        }
+//                     }
+//                 }
+//             }
+//         }
+
+//         return count
+//         // const array = [1,2,3,4,5,6,7]
+
+//         // //array.length => 7
+//         // //array[3] => 4
+
+
+
+//         // matrix = [ [0, 0, 1], [1, 0, 0], [0, 1, 0] ]
+
+//         // matrix = [
+//         //     [0, 0, 1],
+//         //     [1, 0, 0],
+//         //     [0, 1, 0]
+//         // ]
+
+//     }
+//}
