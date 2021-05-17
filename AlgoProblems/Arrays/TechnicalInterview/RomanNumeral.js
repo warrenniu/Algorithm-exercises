@@ -27,27 +27,30 @@ function romanToInt(s) {
     "C": 100,
     "D": 500
   }
-
   let counter = 0
 
   for (let i = 0; i < s.length; i++) {
     let currentValue = romanNumerals[s[i]]
-    let nextValue = romanNumerals[s[i+1]]
+    let nextValue = romanNumerals[s[i + 1]]
     if (currentValue < nextValue) {
-    counter -= romanNumerals[s[i]]
-    console.log("current value", romanNumerals[s[i]], "next value", romanNumerals[s[i+1]])
-    console.log(counter)
-    } 
+      counter -= romanNumerals[s[i]]
+    }
     else {
       counter += romanNumerals[s[i]]
-      console.log("current value", romanNumerals[s[i]], "next value", romanNumerals[s[i+1]])
-      console.log(counter)
     }
   }
-  
-  console.log(counter)
   return counter
 }
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -97,10 +100,10 @@ console.log(romanToInt("MCMXCIV"))
 //       'M': 1000,
 //       'C': 100,
 //       'L': 50,
-      
+
 //     };
 //     let counter = 0;
-    
+
 //     for (let i = 0; i < str.length; i++) {
 //       let currentValue = romanHash[str[i]]
 //       let nextValue = romanHash[str[i+1]]
@@ -111,6 +114,6 @@ console.log(romanToInt("MCMXCIV"))
 //       }
 //       console.log(counter)
 //     }
-      
+
 //     return counter
 //   }
