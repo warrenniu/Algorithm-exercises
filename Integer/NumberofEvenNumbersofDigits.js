@@ -30,26 +30,40 @@ function findNumbers(nums) {
     let stringNums = [];
     let lengthArray = [];
 
-    for (let i = 0; i < nums.length; i++) {
+    for (let i = 0; i < nums.length; i++) { //O N
         stringNums.push(nums[i].toString())
-    }
+    };
 
-    for (let i = 0; i < stringNums.length; i++) {
+    for (let i = 0; i < stringNums.length; i++) { //O N
         lengthArray.push(stringNums[i].length)
-    }
+    };
 
     console.log(stringNums)
     console.log(lengthArray)
 
-    for (let i = 0; i < lengthArray; i++) {
+    for (let i = 0; i < lengthArray.length; i++) { //O N
         if (lengthArray[i] % 2 === 0) {
-            console.log("here")
-            result += 1
+            result += 1;
         }
-    }
+    };
 
     return result;
 
 }
+
+//leetcode solution
+// let findNumbers = function(nums) {
+//     let count=0;
+    
+//     for(let i=0;i<nums.length;i++){
+//         let s='';
+//         s=s+nums[i];
+//         console.log(s)
+//         if(s.length%2===0){
+//             count++;
+//         }
+//     }
+//     return count;
+// };
 
 console.log(findNumbers([12,345,2,6,7896]))
