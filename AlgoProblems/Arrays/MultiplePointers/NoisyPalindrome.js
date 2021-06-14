@@ -8,15 +8,14 @@
 
 function noisyPalindrome(str) {
     let arr = str.split("")
-    let newString = arr.filter(ele => ele.charCodeAt() >= 97 && ele.charCodeAt() <= 122)
-
-    console.log(newString)
-
+    let newArray = arr.filter(ele => ele.charCodeAt() >= 97 && ele.charCodeAt() <= 122)
     let left = 0;
-    let right = newString.length - 1;
+    let right = newArray.length - 1;
 
+    console.log(newArray)
+    
     while (left < right) {
-        if (newString[left] === newString[right]) {
+        if (newArray[left] === newArray[right]) {
             left++
             right--
         }
@@ -25,7 +24,8 @@ function noisyPalindrome(str) {
         }
     }
     return true
-
 }
 
 console.log(noisyPalindrome("a92bcbXa"))
+
+
