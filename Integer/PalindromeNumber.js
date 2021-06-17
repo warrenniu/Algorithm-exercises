@@ -25,8 +25,22 @@
 //5. Return true at end of function
 
 function isPalindrome(x) {
-    const string = x.toString()
+    const string = x.toString();
+    console.log(string)
+    let left = 0;
+    let right = string.length - 1;
+
+    while (left < right) {
+        if (string[left] === string[right]) {
+            left++
+            right--
+        }
+        else {
+            return false
+        }
+    }
+return true
 
 }
 
-console.log(isPalindrome(121))
+console.log(isPalindrome(-101))
