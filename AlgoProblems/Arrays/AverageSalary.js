@@ -38,4 +38,4 @@ function average(salary) {
 
 }
 
-console.log(average([6000,5000,4000,3000,2000,1000]))
+console.log(average([8000,9000,2000,3000,6000,1000]))
