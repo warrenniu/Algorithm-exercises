@@ -29,91 +29,93 @@
 //6. Return result at end of function
 
 function selfDividingNumbers(left, right) {
-    let array = [];
-    let result = [];
+    // let array = [];
+    // let result = [];
 
-    for (let i = left; i <= right; i++) {
-        array.push(i.toString())
-    }
-    console.log(array)
+    // for (let i = left; i <= right; i++) {
+    //     array.push(i.toString())
+    // }
+    // console.log(array)
 
-    for (let i = 0; i < array.length; i++) {
-        // if (i < 10) {
-        //     result.push(i)
-        // }
-        for (let j = 0; j < array[i].length; j++) {
-            // console.log(array[i].length)
-            let split = array[i].split('')
-            console.log(split)
-            for (let k = 0; k <= split.length; k++ ) {
-                console.log("k",split[k])
-                if (parseInt(array[i]) % parseInt(split[k]) !== 0 || parseInt(array[i]) % 10 === 0 ) {
-                    console.log("not divisible")
-                    break
-                }
+    // for (let i = 0; i < array.length; i++) {
+    //     // if (i < 10) {
+    //     //     result.push(i)
+    //     // }
+    //     for (let j = 0; j < array[i].length; j++) {
+    //         // console.log(array[i].length)
+    //         let split = array[i].split('')
+    //         console.log(split)
+    //         for (let k = 0; k < split.length; k++ ) {
+    //             console.log("k",split[k])
+    //             if (parseInt(array[i]) % parseInt(split[k]) !== 0 || parseInt(array[i]) % 10 === 0 ) {
+    //                 console.log("not divisible")
+    //                 break
+    //             }
                 
-                if (split.length === 1) {
-                    result.push(parseInt(array[i]))
-                }
-                if (split.length === 2)
-                    if (parseInt(array[i]) % (parseInt(split[k]) && parseInt(split[k+1])) === 0 && parseInt(array[i]) % 10 !== 0) {
-                result.push(parseInt(array[i]))
-                console.log("inserted into result array",result)
-                }
-                if (split.length === 3)
-                    if (parseInt(array[i]) % (parseInt(split[k]) && parseInt(split[k+1]) && parseInt(split[k+2])) === 0 && parseInt(array[i]) % 10 !== 0) {
-                result.push(parseInt(array[i]))
-                console.log("inserted into result array",result)
-                }
-                if (split.length === 4)
-                    if (parseInt(array[i]) % (parseInt(split[k]) && parseInt(split[k+1]) && parseInt(split[k+2]) && parseInt(split[k+3])) === 0 && parseInt(array[i]) % 10 !== 0) {
-                result.push(parseInt(array[i]))
-                console.log("inserted into result array",result)
-                }
-                if (split.length === 5)
-                    if (parseInt(array[i]) % (parseInt(split[k]) && parseInt(split[k+1]) && parseInt(split[k+2]) && parseInt(split[k+3]) && parseInt(split[k+4])) === 0 && parseInt(array[i]) % 10 !== 0) {
-                result.push(parseInt(array[i]))
-                console.log("inserted into result array",result)
-                }
-                if (split.length === 6)
-                    if (parseInt(array[i]) % (parseInt(split[k]) && parseInt(split[k+1]) && parseInt(split[k+2]) && parseInt(split[k+3]) && parseInt(split[k+4]) && parseInt(split[k+5])) === 0 && parseInt(array[i]) % 10 !== 0) {
-                result.push(parseInt(array[i]))
-                console.log("inserted into result array",result)
-                }
+    //             if (split.length === 1) {
+    //                 result.push(parseInt(array[i]))
+    //             }
+    //             if (split.length === 2) {
+    //                 if (parseInt(array[i]) % parseInt(split[k]) === 0 && parseInt(array[i]) % parseInt(split[k+1]) === 0) {
+    //                     result.push(parseInt(array[i]))
+    //                 }
+    //             }
+    //             // if (split.length === 2)
+    //             //     if (parseInt(array[i]) % (parseInt(split[k]) && parseInt(split[k+1])) === 0 && parseInt(array[i]) % 10 !== 0) {
+    //             // result.push(parseInt(array[i]))
+    //             // }
+    //             if (split.length === 3)
+    //                 if (parseInt(array[i]) % (parseInt(split[k]) && parseInt(split[k+1]) && parseInt(split[k+2])) === 0 && parseInt(array[i]) % 10 !== 0) {
+    //             result.push(parseInt(array[i]))
+    //             }
+    //             if (split.length === 4)
+    //                 if (parseInt(array[i]) % (parseInt(split[k]) && parseInt(split[k+1]) && parseInt(split[k+2]) && parseInt(split[k+3])) === 0 && parseInt(array[i]) % 10 !== 0) {
+    //             result.push(parseInt(array[i]))
+    //             }
+    //             if (split.length === 5)
+    //                 if (parseInt(array[i]) % (parseInt(split[k]) && parseInt(split[k+1]) && parseInt(split[k+2]) && parseInt(split[k+3]) && parseInt(split[k+4])) === 0 && parseInt(array[i]) % 10 !== 0) {
+    //             result.push(parseInt(array[i]))
+    //             }
+    //             if (split.length === 6)
+    //                 if (parseInt(array[i]) % (parseInt(split[k]) && parseInt(split[k+1]) && parseInt(split[k+2]) && parseInt(split[k+3]) && parseInt(split[k+4]) && parseInt(split[k+5])) === 0 && parseInt(array[i]) % 10 !== 0) {
+    //             result.push(parseInt(array[i]))
+    //             }
                 
-            }
-        }
-    }
-    let resultUnique = [...new Set(result)]
+    //         }
+    //     }
+    // }
+    // let resultUnique = [...new Set(result)]
 
 
-    return resultUnique
+    // return resultUnique
 
 }
 
-// function selfDividingNumbers(left,right) {
-//     let result = [];
+function selfDividingNumbers(left,right) {
+    let result = [];
 
-//     for (i = left; i <= right; i++) {
-//         if (i < 10) {
-//             result.push(i)
-//             continue
-//         }
-//         let temp = i
+    for (i = left; i <= right; i++) {
+        if (i < 10) {
+            result.push(i)
+            continue
+        }
+        let temp = i
 
-//         while (temp > 0) {
-//             let module = temp % 10
-//             if (module === 0 || i % module != 0 ) 
-//             // console.log("no push")
-//             break
-//             temp = Math.floor(temp/10)
-//         }
-//         if (temp === 0) {
-//             result.push(i)
-//         }
-//     }
+        while (temp > 0) {
+            let module = temp % 10
+            if (module === 0 || i % module != 0 ) 
+            // console.log("no push")
+            break
+            console.log(temp)
+            temp = Math.floor(temp/10)
+            console.log(temp)
+        }
+        if (temp === 0) {
+            result.push(i)
+        }
+    }
 
-//     return result
-// }
+    return result
+}
 
-console.log(selfDividingNumbers(47,185))
+console.log(selfDividingNumbers(1,22)) 

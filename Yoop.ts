@@ -36,3 +36,10 @@ export class Node {
       
     }
   }
+
+  const container = new Container()
+  container.add(new Node())
+  container.add(new Node())
+  container.add(new Node())
+  console.log(container.keys)
+  console.log(container.getRandom())

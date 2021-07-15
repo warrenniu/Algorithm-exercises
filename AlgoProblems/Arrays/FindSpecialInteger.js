@@ -32,6 +32,7 @@ var findSpecialInteger = function(arr) {
     const ws = Math.floor(arr.length / 4);
     console.log(ws)
     for (let i = 0; i < arr.length - ws; i++) {
+        //if the value appears more than ws, we can conclude it appears more tha 25% of the time
         if (arr[i] === arr[i + ws]) {
             return arr[i];
         }

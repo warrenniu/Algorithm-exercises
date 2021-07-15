@@ -43,18 +43,6 @@ function romanToInt(s) {
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
 console.log(romanToInt("MCMXCIV"))
 
 

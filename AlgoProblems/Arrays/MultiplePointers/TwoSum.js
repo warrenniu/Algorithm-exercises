@@ -54,15 +54,15 @@ function twoSum(nums, target) {
           
         }
 
-        //O(N2)
-    // for (let i = 0; i < nums.length; i++) {
-    //     for (let j = 1; j < nums.length; j++) {
-    //         if (nums[i] + nums[j] === target && i !== j) {
-    //             return [i,j]
-    //         }
-    //     }
-    // }
-
-}
+        
+      }
+      //O(N2)
+  // for (let i = 0; i < nums.length; i++) {
+  //     for (let j = 1; j < nums.length; j++) {
+  //         if (nums[i] + nums[j] === target && i !== j) {
+  //             return [i,j]
+  //         }
+  //     }
+  // }
 
 console.log(twoSum([2,5,5,11], 10))

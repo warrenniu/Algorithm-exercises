@@ -24,20 +24,17 @@ function halvesAreAlike(s) {
     let halfB = 0;
     const freqCounterA = {};
     const freqCounterB = {};
-
     const substringA = s.substring(0, s.length / 2);
     const substringB = s.substring(s.length / 2, s.length);
-    console.log(substringA,substringB)
 
     for (let i = 0; i < substringA.length; i++) {
         freqCounterA[substringA[i]] = freqCounterA[substringA[i]] ? freqCounterA[substringA[i]] += 1 : freqCounterA[substringA[i]] = 1
     };
-
+    
     for (let i = 0; i < substringB.length; i++) {
         freqCounterB[substringB[i]] = freqCounterB[substringB[i]] ? freqCounterB[substringB[i]] += 1 : freqCounterB[substringB[i]] = 1
     };
-    console.log("A",freqCounterA, "B", freqCounterB)
-
+    
     for (key in freqCounterA) {
         for (let i = 0; i < vowels.length; i++) {
             if (key === vowels[i]) {
@@ -45,7 +42,7 @@ function halvesAreAlike(s) {
             }
         }
     };
-
+    
     for (key in freqCounterB) {
         for (let i = 0; i < vowels.length; i++) {
             if (key === vowels[i]) {
@@ -56,5 +53,12 @@ function halvesAreAlike(s) {
     return halfA === halfB ? true : false;
 }
 
+
+
+
+
+
+
 console.log(halvesAreAlike("book"))
+
 
