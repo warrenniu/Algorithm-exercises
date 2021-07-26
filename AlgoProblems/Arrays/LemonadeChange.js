@@ -48,35 +48,7 @@ function lemonadeChange(bills) {
             }
         }
     }
-
-
-
-    // for (let i = 0; i < bills.length; i++) {
-    //     if (bills[i] === 5) {
-    //         change += 5
-    //         console.log("collected 5 dollars", change)
-    //     }
-    //     else if (bills[i] === 10) {
-    //         if (change >= 5) {
-    //             change -= 5
-    //             console.log("gave 5 dollars", change)
-    //         } else {
-    //             return false
-    //         }
-    //         change += 10
-    //         console.log(change)
-    //     }
-    //     else if (bills[i] === 20) {
-    //         if (change >= 15) {
-    //             change -= 15
-    //             console.log("gave 15 dollars", change)
-    //         } else {
-    //             return false
-    //         }
-    //         change += 20
-    //     }
-    // }
     return true
 }
 
-console.log(lemonadeChange([5, 5, 10, 10, 20]))
+console.log(lemonadeChange([5,5,10]))
