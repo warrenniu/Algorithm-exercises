@@ -20,15 +20,11 @@ function firstUniqChar(s) {
         freqCounter[s[i]] = freqCounter[s[i]] ? freqCounter[s[i]] += 1 : freqCounter[s[i]] = 1
     }
 
-    console.log(freqCounter)
-
     for (key in freqCounter) {
         if (freqCounter[key] === 1) {
             uniqueCharacters.push(key)
         }
     }
-
-    console.log(uniqueCharacters)
 
     for (let i = 0; i < s.length; i++) {
         if (s[i] === uniqueCharacters[0]) {
@@ -39,4 +35,4 @@ function firstUniqChar(s) {
     return -1
 }
 
-console.log(firstUniqChar("leetcode"))
+console.log(firstUniqChar("aabb"))
