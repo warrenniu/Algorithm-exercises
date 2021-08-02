@@ -20,22 +20,21 @@
 //6. Check if the text input includes letters from brokenLetters input
 //7. If yes, include count by 1
 //8. Check after each iteration if count is equal to 0. If it is, increase result by 1
-//9 Return result at end of function
+//9 Return result at end of function›
 
 
 const canBeTypedWords = (text, brokenLetters) => {
-    text = text.split(' ')
-    let result = 0
+    text = text.split(' ');
+    let result = 0;
+
     for (let t of text) {
-        let count = 0
+        let count = 0;
+
         for (let j of brokenLetters) {
             if (t.includes(j)) count++
         }
-        if (count === 0) result++
-
     }
     return result
 }
-
 
 console.log(canBeTypedWords("leet code", "lt"))
