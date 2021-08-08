@@ -23,6 +23,7 @@ function findLucky(arr) {
     for (let i = 0; i < arr.length; i++) {
         freqCounter[arr[i]] = freqCounter[arr[i]] ? freqCounter[arr[i]] += 1 : freqCounter[arr[i]] = 1
     };
+    
 
     for (key in freqCounter) {
         if (parseInt(key) === freqCounter[key]) {
