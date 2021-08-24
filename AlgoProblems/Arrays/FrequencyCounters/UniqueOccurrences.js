@@ -13,25 +13,28 @@
 //4. return true at the end of the function
 
 function uniqueOccurrences(arr) {
-    let frequencyCounter = {};
+  let frequencyCounter = {};
 
-    for (val of arr) {
-        frequencyCounter[val] = frequencyCounter[val] ? frequencyCounter[val] += 1 : frequencyCounter[val] = 1;
+  for (val of arr) {
+    frequencyCounter[val] = frequencyCounter[val]
+      ? (frequencyCounter[val] += 1)
+      : (frequencyCounter[val] = 1);
+  }
+
+  console.log(frequencyCounter);
+
+  let object = Object.values(frequencyCounter);
+  console.log(object);
+
+  for (let i = 0; i < object.length; i++) {
+    for (let j = 0; j < object.length; j++) {
+      if (i !== j && object[i] === object[j]) {
+        return false;
+      }
     }
+  }
 
-    console.log(frequencyCounter)
-
-    let object = Object.values(frequencyCounter)
-
-    for (let i = 0; i < object.length; i++) {
-        for (let j = 0; j < object.length; j++) {
-            if (i !== j && object[i] === object[j]) {
-                return false
-            }
-        }
-    }
-    
-    return true
+  return true;
 }
 
-console.log(uniqueOccurrences([-3,0,1,-3,1,1,1,-3,10,0]))
+console.log(uniqueOccurrences([-3, 0, 1, -3, 1, 1, 1, -3, 10, 0]));

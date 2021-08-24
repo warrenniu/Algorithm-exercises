@@ -12,33 +12,37 @@
 //5. return true at the end of the function
 
 function sameFrequency(num1, num2) {
-    let frequencyCounter1 = {};
-    let frequencyCounter2 = {};
-    let arrayOfNum1 = Array.from(String(num1), Number)
-    let arrayOfNum2 = Array.from(String(num2), Number)
+  let frequencyCounter1 = {};
+  let frequencyCounter2 = {};
+  let arrayOfNum1 = Array.from(String(num1), Number);
+  let arrayOfNum2 = Array.from(String(num2), Number);
+  console.log(arrayOfNum1);
 
-    if (arrayOfNum1.length !== arrayOfNum2.length) {
-        return false
-    }
+  if (arrayOfNum1.length !== arrayOfNum2.length) {
+    return false;
+  }
 
-    for (val of arrayOfNum1) {
-        frequencyCounter1[val] ? frequencyCounter1[val] += 1 : frequencyCounter1[val] = 1
-    }
-    for (val of arrayOfNum2) {
-        frequencyCounter2[val] ? frequencyCounter2[val] += 1 : frequencyCounter2[val] = 1
-    }
-    console.log(frequencyCounter1)
-    console.log(frequencyCounter2)
+  for (val of arrayOfNum1) {
+    frequencyCounter1[val]
+      ? (frequencyCounter1[val] += 1)
+      : (frequencyCounter1[val] = 1);
+  }
+  for (val of arrayOfNum2) {
+    frequencyCounter2[val]
+      ? (frequencyCounter2[val] += 1)
+      : (frequencyCounter2[val] = 1);
+  }
+  console.log(frequencyCounter1);
+  console.log(frequencyCounter2);
 
-    for (key in frequencyCounter1) {
-        if (!(key in frequencyCounter2)) {
-            return false
-        }
-        else if (frequencyCounter1[key] !== frequencyCounter2[key]) {
-            return false
-        }
+  for (key in frequencyCounter1) {
+    if (!(key in frequencyCounter2)) {
+      return false;
+    } else if (frequencyCounter1[key] !== frequencyCounter2[key]) {
+      return false;
     }
-    return true
+  }
+  return true;
 }
 
-console.log(sameFrequency(0, 0))
+console.log(sameFrequency(0, 0));

@@ -10,7 +10,6 @@
 // Each word only consists of lowercase English letters.
 // brokenLetters consists of distinct lowercase English letters.
 
-
 //Steps
 //1. Convert text into an array of strings. Set it to a variable called textArray
 //2. Initialize a variable called result. Set it to 0
@@ -22,19 +21,22 @@
 //8. Check after each iteration if count is equal to 0. If it is, increase result by 1
 //9 Return result at end of function›
 
-
 const canBeTypedWords = (text, brokenLetters) => {
-    text = text.split(' ');
-    let result = 0;
+  text = text.split(" ");
+  let result = 0;
 
-    for (let t of text) {
-        let count = 0;
+  for (let t of text) {
+    let count = 0;
 
-        for (let j of brokenLetters) {
-            if (t.includes(j)) count++
-        }
+    for (let j of brokenLetters) {
+      if (t.includes(j)) count++;
     }
-    return result
-}
+    if (count === 0) {
+      result += 1;
+    }
+  }
 
-console.log(canBeTypedWords("leet code", "lt"))
+  return result;
+};
+
+console.log(canBeTypedWords("leet code", "lt"));
