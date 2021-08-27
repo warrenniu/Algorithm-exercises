@@ -44,5 +44,8 @@ function maxSubArray(nums) {
 //-2, -2, -2, -infinity = max = -2
 //1, -1, currentMax = 1. 1, -2 max = 1
 //-3, -2 currentMax = -2. -2, 1 max = 1
+//4, 2, currentMax = 4, 1 max = 4
+//-1, 3 currentMax = 3, 4 max = 4
+//2, 5, currentMax = 5 4, max = 5
 
 console.log(maxSubArray([-2, 1, -3, 4, -1, 2, 1, -5, 4]));
